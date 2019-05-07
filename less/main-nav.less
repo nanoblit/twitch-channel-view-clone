@@ -1,0 +1,46 @@
+#main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: @nav-purple;
+    height: 5.1rem;
+}
+
+#main-nav-left {
+    display: flex;
+    align-items: center;
+
+    button,
+    a,
+    input {
+        margin: 0.8em;
+    }
+
+    a {
+        font-size: 1.4rem;
+        color: @light-purple;
+        text-decoration: none;
+    }
+    
+    input {
+        background-color: @dark-purple;
+        border: 1px solid @purple;
+        border-radius: @border-radius;
+        height: 2.7rem;
+    }
+}
+
+#main-nav-right {
+    display: flex;
+    align-items: center;
+
+    button {
+        margin-right: 0.8em;
+
+        &#get-bits-button {
+            width: 7rem;
+            color: white;
+            font-size: 1.2rem;
+        }
+    }
+}
