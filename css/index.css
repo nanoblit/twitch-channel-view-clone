@@ -136,21 +136,39 @@ body {
 }
 :root {
   font-size: 62.5%;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(241, 241, 241, 0);
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888888;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555555;
+}
+#content {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
 }
 button {
   width: 2.7rem;
   height: 2.7rem;
   background-color: Transparent;
-  border: 1px solid white;
+  border: 0.1rem solid white;
   border-radius: 0.4rem;
   cursor: pointer;
 }
-a,
-p {
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-}
 #main-nav {
   display: flex;
+  flex-shrink: 0;
   justify-content: space-between;
   align-items: center;
   background-color: #4B367C;
@@ -163,7 +181,7 @@ p {
 #main-nav-left button,
 #main-nav-left a,
 #main-nav-left input {
-  margin: 0.8em;
+  margin: 0 0.8rem;
 }
 #main-nav-left a {
   font-size: 1.4rem;
@@ -172,7 +190,7 @@ p {
 }
 #main-nav-left input {
   background-color: #3C2B63;
-  border: 1px solid #6441A4;
+  border: 0.1rem solid #6441A4;
   border-radius: 0.4rem;
   height: 2.7rem;
 }
@@ -181,10 +199,36 @@ p {
   align-items: center;
 }
 #main-nav-right button {
-  margin-right: 0.8em;
+  margin-right: 0.8rem;
 }
 #main-nav-right button#get-bits-button {
   width: 7rem;
   color: white;
   font-size: 1.2rem;
+}
+#website {
+  display: flex;
+  align-items: stretch;
+  height: 100%;
+}
+#left-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #19171C;
+  width: 4.7rem;
+  overflow-y: hidden;
+  position: absolute;
+  top: 5.1rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: overflow-y 0.2s;
+}
+#left-nav:hover {
+  overflow-y: overlay;
+}
+#left-nav button {
+  margin: 0.5rem 0;
+  flex-shrink: 0;
 }

@@ -1,16 +1,38 @@
 :root {
     font-size: 62.5%;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgba(241, 241, 241, 0);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgba(136, 136, 136, 1);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(85, 85, 85, 1);
+}
+
+#content {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
 }
 
 button {
     width: 2.7rem;
     height: 2.7rem;
     background-color: Transparent;
-    border: 1px solid white;
+    border: 0.1rem solid white;
     border-radius: @border-radius;
     cursor: pointer;
-}
-
-a, p {
-    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
 }

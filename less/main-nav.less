@@ -1,9 +1,10 @@
 #main-nav {
     display: flex;
+    flex-shrink: 0;
     justify-content: space-between;
     align-items: center;
     background-color: @nav-purple;
-    height: 5.1rem;
+    height: @nav-height;
 }
 
 #main-nav-left {
@@ -13,7 +14,7 @@
     button,
     a,
     input {
-        margin: 0.8em;
+        margin: 0 0.8rem;
     }
 
     a {
@@ -21,10 +22,10 @@
         color: @light-purple;
         text-decoration: none;
     }
-    
+
     input {
         background-color: @dark-purple;
-        border: 1px solid @purple;
+        border: 0.1rem solid @purple;
         border-radius: @border-radius;
         height: 2.7rem;
     }
@@ -35,7 +36,7 @@
     align-items: center;
 
     button {
-        margin-right: 0.8em;
+        margin-right: 0.8rem;
 
         &#get-bits-button {
             width: 7rem;

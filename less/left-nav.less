@@ -1,0 +1,23 @@
+#left-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: @light-gray;
+    width: 4.7rem;
+    overflow-y: hidden;
+    position: absolute;
+    top: @nav-height;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: overflow-y 0.2s;
+
+    &:hover {
+        overflow-y: overlay;
+    }
+
+    button {
+        margin: 0.5rem 0;
+        flex-shrink: 0;
+    }
+}
