@@ -1,12 +1,14 @@
 #middle {
     position: absolute;
     background-color: @dark-gray;
+    .scrollbar-on-hover();
     left: @left-nav-width;
     top: @nav-height;
     right: @chat-width;
     bottom: 0;
 
     #middle-top-nav {
+        position: fixed;
         width: 100%;
         height: @nav-height;
         background-color: @light-gray;
@@ -14,21 +16,20 @@
     }
 
     #middle-container {
-        margin: 2rem;
+        margin: @nav-height + 2rem 2rem 2rem;
 
-        #player-container {
-            height: 0;
-            padding-bottom: 83%;
+        #video {
+            background-color: black;
+            width: 100%;
+            padding-bottom: 56%;
+        }
+        
+        #video-info {
+            height: 15rem; // Should resize with content
             background-color: @light-gray;
             border: 0.1rem solid @border-gray;
             border-bottom-left-radius: @border-radius;
             border-bottom-right-radius: @border-radius;
-
-            #video {
-                background-color: black;
-                width: 100%;
-                padding-bottom: 56%;
-            }
         }
     }
 }
