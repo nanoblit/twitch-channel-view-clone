@@ -235,14 +235,10 @@ button {
 #middle {
   position: absolute;
   background-color: #0F0E11;
-  overflow-y: hidden;
   left: 5rem;
   top: 5.1rem;
   right: 33.9rem;
   bottom: 0;
-}
-#middle:hover {
-  overflow-y: overlay;
 }
 #middle #middle-top-nav {
   position: fixed;
@@ -252,14 +248,27 @@ button {
   border-bottom: 0.1rem solid #252328;
 }
 #middle #middle-container {
-  margin: 7.1rem 2rem 2rem;
+  margin-top: 5.1rem;
+  position: absolute;
+  background-color: #0F0E11;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow-y: hidden;
 }
-#middle #middle-container #video {
+#middle #middle-container:hover {
+  overflow-y: overlay;
+}
+#middle #middle-container #middle-inner-container {
+  margin: 2rem 2rem 2rem;
+}
+#middle #middle-container #middle-inner-container #video {
   background-color: black;
   width: 100%;
   padding-bottom: 56%;
 }
-#middle #middle-container #video-info {
+#middle #middle-container #middle-inner-container #video-info {
   height: 15rem;
   background-color: #19171C;
   border: 0.1rem solid #252328;

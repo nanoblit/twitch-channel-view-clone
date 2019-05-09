@@ -1,7 +1,6 @@
 #middle {
     position: absolute;
     background-color: @dark-gray;
-    .scrollbar-on-hover();
     left: @left-nav-width;
     top: @nav-height;
     right: @chat-width;
@@ -16,20 +15,31 @@
     }
 
     #middle-container {
-        margin: @nav-height + 2rem 2rem 2rem;
+        margin-top: @nav-height;
+        position: absolute;
+        background-color: @dark-gray;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        .scrollbar-on-hover();
 
-        #video {
-            background-color: black;
-            width: 100%;
-            padding-bottom: 56%;
-        }
-        
-        #video-info {
-            height: 15rem; // Should resize with content
-            background-color: @light-gray;
-            border: 0.1rem solid @border-gray;
-            border-bottom-left-radius: @border-radius;
-            border-bottom-right-radius: @border-radius;
+        #middle-inner-container {
+             margin: 2rem 2rem 2rem;
+
+            #video {
+                background-color: black;
+                width: 100%;
+                padding-bottom: 56%;
+            }
+
+            #video-info {
+                height: 15rem; // Should resize with content
+                background-color: @light-gray;
+                border: 0.1rem solid @border-gray;
+                border-bottom-left-radius: @border-radius;
+                border-bottom-right-radius: @border-radius;
+            }
         }
     }
 }
