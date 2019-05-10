@@ -241,7 +241,6 @@ button {
   bottom: 0;
 }
 #middle #middle-top-nav {
-  position: fixed;
   width: 100%;
   height: 5.1rem;
   background-color: #19171C;
@@ -276,6 +275,8 @@ button {
   border-bottom-right-radius: 0.4rem;
 }
 #chat {
+  display: flex;
+  flex-direction: column;
   position: absolute;
   background-color: #0F0E11;
   border-left: 0.1rem solid #252328;
@@ -283,4 +284,73 @@ button {
   top: 5.1rem;
   right: 0;
   bottom: 0;
+}
+#chat #chat-top {
+  height: 5.1rem;
+  border-bottom: 0.1rem solid #252328;
+  background-color: #19171C;
+}
+#chat #chat-view {
+  position: absolute;
+  top: 5.1rem;
+  bottom: 13rem;
+  overflow-y: hidden;
+  background-color: #0F0E11;
+  flex-grow: 1;
+  padding: 0 2rem 0;
+}
+#chat #chat-view:hover {
+  overflow-y: overlay;
+}
+#chat #chat-view p {
+  font-size: 1.3rem;
+  color: #898395;
+  margin-bottom: 1.3rem;
+}
+#chat #chat-view p .chat-username {
+  font-weight: bold;
+  color: #c029c0;
+}
+#chat #chat-bottom {
+  position: absolute;
+  bottom: 0;
+  background-color: #0F0E11;
+  height: 13rem;
+  padding: 0 2rem 1rem;
+}
+#chat #chat-bottom p {
+  padding: 1rem 0 1rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #898395;
+  border-top: 0.1rem solid #19171C;
+}
+#chat #chat-bottom textarea {
+  width: 30rem;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  background-color: #0F0E11;
+  border: 0.1rem solid #3C2B63;
+  border-radius: 0.4rem;
+  caret-color: white;
+  color: white;
+  outline: none !important;
+}
+#chat #chat-bottom textarea:focus {
+  border: 0.1rem solid #6441A4;
+}
+#chat #chat-bottom #chat-bottom-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+#chat #chat-bottom #chat-bottom-buttons #chat-bottom-buttons-left-row button {
+  margin-top: 1rem;
+}
+#chat #chat-bottom #chat-bottom-buttons #chat-bottom-buttons-right-row button {
+  background-color: #19171C;
+  border: 0.1rem solid #322e38;
+  width: 3.8rem;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  color: grey;
 }

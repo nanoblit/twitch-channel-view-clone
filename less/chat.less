@@ -1,4 +1,6 @@
 #chat {
+    display: flex;
+    flex-direction: column;
     position: absolute;
     background-color: @dark-gray;
     border-left: 0.1rem solid @border-gray;
@@ -6,4 +8,84 @@
     top: @nav-height;
     right: 0;
     bottom: 0;
+
+    #chat-top {
+        height: @nav-height;
+        border-bottom: 0.1rem solid @border-gray;
+        background-color: @light-gray;
+    }
+
+    #chat-view {
+        position: absolute;
+        top: @nav-height;
+        bottom: 13rem;
+        .scrollbar-on-hover();
+        background-color: @dark-gray;
+        flex-grow: 1;
+        padding: 0 2rem 0;
+
+        p {
+            font-size: 1.3rem;
+            color: @chat-text-gray;
+            margin-bottom: 1.3rem;
+
+            .chat-username {
+                font-weight: bold;
+                color: rgb(192, 41, 192);
+            }
+        }
+    }
+
+    #chat-bottom {
+        position: absolute;
+        bottom: 0;
+        background-color: @dark-gray;
+        height: 13rem;
+        padding: 0 2rem 1rem;
+
+        p {
+            padding: 1rem 0 1rem;
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: @chat-text-gray;
+            border-top: 0.1rem solid @light-gray;
+        }
+
+        textarea {
+            width: 30rem;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            line-height: 1.5;
+            background-color: @dark-gray;
+            border: 0.1rem solid @dark-purple;
+            border-radius: @border-radius;
+            caret-color: white;
+            color: white;
+            outline: none !important;
+
+            &:focus {
+                border: 0.1rem solid @purple;
+            }
+        }
+        #chat-bottom-buttons {
+            display: flex;
+            justify-content: space-between;
+
+            #chat-bottom-buttons-left-row {
+                button {
+                    margin-top: 1rem;
+                }
+            }
+
+            #chat-bottom-buttons-right-row {
+                button {
+                    background-color: @light-gray;
+                    border: 0.1rem solid lighten(@light-gray, 10%);
+                    width: 3.8rem;
+                    font-size: 1.1rem;
+                    margin-top: 1rem;
+                    color: grey;
+                }
+            }
+        }
+    }
 }
