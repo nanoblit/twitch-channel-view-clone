@@ -297,7 +297,7 @@ button {
   overflow-y: hidden;
   background-color: #0F0E11;
   flex-grow: 1;
-  padding: 0 2rem 0;
+  padding: 1rem 2rem 0;
 }
 #chat #chat-view:hover {
   overflow-y: overlay;
@@ -326,7 +326,7 @@ button {
   border-top: 0.1rem solid #19171C;
 }
 #chat #chat-bottom textarea {
-  width: 30rem;
+  width: 29rem;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.5;
   background-color: #0F0E11;
@@ -334,6 +334,7 @@ button {
   border-radius: 0.4rem;
   caret-color: white;
   color: white;
+  resize: none;
   outline: none !important;
 }
 #chat #chat-bottom textarea:focus {
